@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+  
+  overflow: hidden;
+}
+
+.container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container > :nth-child(1) {
+  background-color: red;
+  color: black;
+}
+
+.container > :nth-child(2) {
+  background-color: blue;
+}
+
+.container > :nth-child(3) {
+  background-color: green;
+}
+
+.container > :nth-child(4) {
+  background-color: yellow;
+  color: black;
+}
+
+.tile {
+  height: 80vh;
+  flex: 1;
+  border: 2px solid black;
+  border-radius: 50px;
+  position: relative;
+  margin: 10px;
+  cursor: pointer;
+  transition: flex 0.5s ease-in 0s;
+}
+
+.tile > h1 {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in 0.2s;
+}
+
+.active {
+  flex-grow: 10;
+}
+
+.active > h1 {
+  opacity: 1;
+}
